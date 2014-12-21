@@ -121,7 +121,7 @@ function getParam( req, param, def){
   }else{
     return def;
   }
-};
+}
 
 function pushToItsOwnArray(input, array){
   console.log('input' + input);
