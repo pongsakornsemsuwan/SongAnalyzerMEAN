@@ -1,5 +1,5 @@
-Note = require('../../model/note.js');
-Chord = require('../../model/chord.js');
+Note = require('../model/note.js');
+Chord = require('../model/chord.js');
 
 var allKey = ['C','G','D','A','E','B','F#','F','Bb','Eb','Ab','Db'];
 
