@@ -26,9 +26,6 @@ router.get('/analyze', function(req, res) {
   var bridge = getParam(req, 'brdige', '');
   var outro = getParam(req, 'outro', '');
 
-  //whole song
-  var chordArray = [];
-
   //Array object for each section
   var introArray = [];
   var verseArray = [];
@@ -38,7 +35,7 @@ router.get('/analyze', function(req, res) {
   var bridgeArray = [];
   var outroArray = [];
 
-  //split string to array of each section and add them to chordArray
+  //split string to array of each section
 
   pushToItsOwnArray(intro, introArray);
   pushToItsOwnArray(verse, verseArray);
@@ -48,23 +45,27 @@ router.get('/analyze', function(req, res) {
   pushToItsOwnArray(bridge, bridgeArray);
   pushToItsOwnArray(outro, outroArray);
 
-  //concat whole song to chordArray --> to find the key
-  if (introArray !== null)
-    chordArray = chordArray.concat(introArray);
-  if (verseArray !== null)
-    chordArray = chordArray.concat(verseArray);
-  if (prechorusArray !== null)
-    chordArray = chordArray.concat(prechorusArray);
-  if (chorusArray !== null)
-    chordArray = chordArray.concat(chorusArray);
-  if (soloArray !== null)
-    chordArray = chordArray.concat(soloArray);
-  if (bridgeArray !== null)
-    chordArray = chordArray.concat(bridgeArray);
-  if (outroArray !== null)
-    chordArray = chordArray.concat(outroArray);
-
   if (key === null || key === '') {
+
+    //whole song
+    var chordArray = [];
+
+    //concat whole song to chordArray --> to find the key
+    if (introArray !== null)
+      chordArray = chordArray.concat(introArray);
+    if (verseArray !== null)
+      chordArray = chordArray.concat(verseArray);
+    if (prechorusArray !== null)
+      chordArray = chordArray.concat(prechorusArray);
+    if (chorusArray !== null)
+      chordArray = chordArray.concat(chorusArray);
+    if (soloArray !== null)
+      chordArray = chordArray.concat(soloArray);
+    if (bridgeArray !== null)
+      chordArray = chordArray.concat(bridgeArray);
+    if (outroArray !== null)
+      chordArray = chordArray.concat(outroArray);
+
     key = SongService.getKey(chordArray)[0].key;
   }
 
@@ -108,7 +109,6 @@ router.get('/analyze', function(req, res) {
     //console.log(ChordProgTree.getValue('I,V'));
     res.send(resultMap);
     //res.send(ChordProgTree.getTree().toString());
-
 
   }
 });
