@@ -22,6 +22,8 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="getkey">Key Finder</a></li>
                 <li class="active"><a href="analyze">Analyze Chords</a></li>
+                <li><a href="#">Song Generator</a></li>
+                <li><a href="#">Teach Stupid Dave</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -31,33 +33,49 @@
 
     <div class="starter-template">
         <h1>Analyze Chord Progression</h1>
-        <p class="lead">Some chord progressions are quite popular and catchy. They are used in many famous songs.<br/> I'll help you analyze you chord progression and tell you if it's one of those!</p>
+        <p class="lead">Some chord progressions are quite popular and catchy. They are used in many famous songs.<br/> I'll help you analyze your chord progression and tell you if it's one of those!</p>
 
         <p>Submit comma separated chords in boxes below and hit Submit button</p>
         <form>
-            <div class="section">
-                <span class="sectionTitle">Intro : </span><textarea rows="2" cols="60"></textarea> <br/>
-            </div>
-            <div class="section">
-                <span class="sectionTitle">Verse : </span><textarea rows="2" cols="60"></textarea> <br/>
-            </div>
-            <div class="section">
-                <span class="sectionTitle">Prechorus : </span><textarea rows="2" cols="60"></textarea> <br/>
-            </div>
-            <div class="section">
-                <span class="sectionTitle">Chorus : </span><textarea rows="2" cols="60"></textarea> <br/>
-            </div>
-            <div class="section">
-                <span class="sectionTitle">Solo : </span><textarea rows="2" cols="60"></textarea> <br/>
-            </div>
-            <div class="section">
-                <span class="sectionTitle">Bridge : </span><textarea rows="2" cols="60"></textarea> <br/>
-            </div>
-            <div class="section">
-                <span class="sectionTitle">Outro : </span><textarea rows="2" cols="60"></textarea> <br/>
-            </div>
-            <button type="button" class="btn btn-md btn-default">Clear</button>
-            <button type="button" class="btn btn-md btn-primary">Help me, Doctor!</button>
+                <div class="section">
+                    <span class="sectionTitle">Key : </span>
+                    <select>
+                        <option>Auto-detect</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                        <option>G</option>
+                        <option>F#</option>
+                        <option>Ab</option>
+                        <option>Bb</option>
+                        <option>Db</option>
+                        <option>Eb</option>
+                    </select>
+                </div>
+                <div class="section">
+                    <span class="sectionTitle">Intro : </span><textarea rows="2" cols="60"></textarea> <br/>
+                </div>
+                <div class="section">
+                    <span class="sectionTitle">Verse : </span><textarea rows="2" cols="60"></textarea> <br/>
+                </div>
+                <div class="section">
+                    <span class="sectionTitle">Prechorus : </span><textarea rows="2" cols="60"></textarea> <br/>
+                </div>
+                <div class="section">
+                    <span class="sectionTitle">Chorus : </span><textarea rows="2" cols="60"></textarea> <br/>
+                </div>
+                <div class="section">
+                    <span class="sectionTitle">Solo : </span><textarea rows="2" cols="60"></textarea> <br/>
+                </div>
+                <div class="section">
+                    <span class="sectionTitle">Bridge : </span><textarea rows="2" cols="60"></textarea> <br/>
+                </div>
+                <div class="section">
+                    <span class="sectionTitle">Outro : </span><textarea rows="2" cols="60"></textarea> <br/>
+                </div>
+                <button type="button" class="btn btn-md btn-default">Clear</button>
+                <button type="button" class="btn btn-md btn-primary">Help me, Doctor!</button>
         </form>
     </div>
 
