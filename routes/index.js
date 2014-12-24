@@ -1,4 +1,4 @@
-var SongService = require('../service/SongService.js');
+var SongService = require('../service/songService.js');
 
 var express = require('express');
 var router = express.Router();
