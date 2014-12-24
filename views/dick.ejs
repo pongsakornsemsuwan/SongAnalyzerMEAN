@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include include/header.ejs %>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Dr. Dave</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="getkey">Key Finder</a></li>
+                <li><a href="analyze">Analyze Chords</a></li>
+                <li class="active"><a href="dick">Chord Prog Dict</a></li>
+                <li><a href="#">Song Generator</a></li>
+                <li><a href="#">Teach Stupid Dave</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="starter-template">
+        <div class="row">
+            <div class="col-md-3" style="border-right: 1px;text-align: left;">
+                <!-- list known progression -->
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation" class="active"><a href="#" style="padding:5px 15px;">I-V-vi-IV</a></li>
+                    <li role="presentation" ><a href="#" style="padding:5px 15px;">I-V-vi-IV</a></li>
+                    <li role="presentation" ><a href="#" style="padding:5px 15px;">I-V-vi-IV</a></li>
+                    <li role="presentation" ><a href="#" style="padding:5px 15px;">I-V-vi-IV</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" style="text-align:left;">
+                <h2>Description</h2>
+                <!-- Main/Official Description -->
+                <div>
+                    <blockquote>
+                    <p>The I–V–vi–IV progression is a common chord progression popular across several genres of music. It involves the I, V, vi, and IV chords; for example, in the key of C major, this would be: C–G–Am–F.</p>
+
+                    <p>The V is often replaced by iii ("Price Tag"), III ("If We Ever Meet Again" chorus), ii ("Halo"), I ("Doesn't Mean Anything"), II ("Try Too Hard" by P!nk), IV ("I Gotta Feeling").</p>
+
+                    <p>A 2009 recording by the comedy group The Axis of Awesome, their "Four-Chord Song", in D major (thus using the chords D major, A major, B minor, and G major), is a widely viewed clip on YouTube.</p>
+                        <footer>Wikipedia</footer>
+                    </blockquote>
+                </div>
+
+                <!-- User comment -->
+                <div style="margin-top:20px;">
+                    <blockquote style="border:none;">
+                    This one is the most common.
+                        <footer>Anonymous</footer>
+                    </blockquote>
+                </div>
+                <div style="margin-top:20px;">
+                    <blockquote style="border:none;">
+                    Screw this.
+                        <footer>Beethoven</footer>
+                    </blockquote>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div><!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

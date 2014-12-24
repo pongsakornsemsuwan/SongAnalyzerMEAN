@@ -14,17 +14,17 @@ router.get('/getkey', function(req, res) {
 
 router.get('/analyze', function(req, res) {
 
-  var key = getParam(req, 'key', null);
+  var key = req.param('key') || null;
 
   //String input
   //var intro = this.introIn = this.param('intro');
-  var intro = getParam(req, 'intro', '');
-  var verse = getParam(req, 'verse', '');
-  var prechorus = getParam(req, 'prechorus', '');
-  var chorus = getParam(req, 'chorus', '');
-  var solo = getParam(req, 'solo', '');
-  var bridge = getParam(req, 'brdige', '');
-  var outro = getParam(req, 'outro', '');
+  var intro = req.param('intro') || '';
+  var verse = req.param('verse') || '';
+  var prechorus = req.param('prechorus') || '';
+  var chorus = req.param('chorus') || '';
+  var solo = req.param('solo') || '';
+  var bridge = req.param('bridge') || '';
+  var outro = req.param('outro') || '';
 
   //Array object for each section
   var introArray = [];
@@ -112,16 +112,6 @@ router.get('/analyze', function(req, res) {
 
   }
 });
-
-
-function getParam( req, param, def){
-
-  if(typeof req.param( param ) !== 'undefined'){
-    return req.param( param );
-  }else{
-    return def;
-  }
-}
 
 function pushToItsOwnArray(input, array){
   console.log('input' + input);

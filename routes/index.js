@@ -26,4 +26,10 @@ router.get('/analyze', function(req, res){
 
 });
 
+router.get('/dick', function(req, res){
+
+  res.render(path.join(__dirname, '../views', 'dick'));
+
+});
+
 module.exports = router;
