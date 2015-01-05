@@ -11,6 +11,9 @@
   max-width: 100%;
   line-height: 22px;
   cursor: text;
+  width:433px;
+  height:166px;
+  text-align:left;
 }
 .bootstrap-tagsinput input {
   border: none;

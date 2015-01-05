@@ -101,14 +101,14 @@
 
       // Ignore items allready added
       var existing = $.grep(self.itemsArray, function(item) { return self.options.itemValue(item) === itemValue; } )[0];
-      //if (existing && !self.options.allowDuplicates) {
-      //  // Invoke onTagExists
-      //  if (self.options.onTagExists) {
-      //    var $existingTag = $(".tag", self.$container).filter(function() { return $(this).data("item") === existing; });
-      //    self.options.onTagExists(item, $existingTag);
-      //  }
-      //  return;
-      //}
+      if (existing && !self.options.allowDuplicates) {
+        // Invoke onTagExists
+        if (self.options.onTagExists) {
+          var $existingTag = $(".tag", self.$container).filter(function() { return $(this).data("item") === existing; });
+          self.options.onTagExists(item, $existingTag);
+        }
+        return;
+      }
 
       // if length greater than limit
       if (self.items().toString().length + item.length + 1 > self.options.maxInputLength)
