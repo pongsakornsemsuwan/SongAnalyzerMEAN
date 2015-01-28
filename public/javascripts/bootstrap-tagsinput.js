@@ -15,7 +15,7 @@
     addOnBlur: true,
     maxTags: undefined,
     maxChars: undefined,
-    confirmKeys: [9,13, 44],
+    confirmKeys: [9, 13, 44],
     onTagExists: function(item, $tag) {
       $tag.hide().fadeIn();
     },

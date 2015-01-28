@@ -11,7 +11,7 @@ var api = require('./routes/api');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/public/views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
@@ -43,6 +43,10 @@ if (app.get('env') === 'development') {
             message: err.message,
             error: err
         });
+        //res.render(path.join(__dirname, '../public/views', 'error'), {
+        //    message: err.message,
+        //    error: err
+        //});
     });
 }
 
@@ -54,6 +58,7 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     });
+
 });
 
 module.exports = app;

@@ -1,5 +1,5 @@
-var SongService = require('../service/songService.js');
-var ChordProgTree = require('../service/chordProgTreeService.js');
+var SongService = require('../server/service/songService.js');
+var ChordProgTree = require('../server/service/chordProgTreeService.js');
 var express = require('express');
 var router = express.Router();
 var path = require('path');
