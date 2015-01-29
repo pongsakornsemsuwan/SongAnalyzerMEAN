@@ -6,6 +6,7 @@ var path = require('path');
 
 router.get('/getkey', function(req, res) {
   var chordArray = req.param('chord').split(',');
+  console.log(req.param('chord'));
   var keyCompatArray = SongService.getKey(chordArray);
   console.log(keyCompatArray);
   res.send(keyCompatArray);
